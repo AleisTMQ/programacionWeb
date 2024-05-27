@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Taller Mecánico</title>
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+<script src="js/listaAutos.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a href="index.html" class="navbar-brand">
+    <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo del Taller Mecánico">
+    Taller Mecánico McQueen
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+    <ul class="navbar-nav">
+      <!-- Aquí puedes agregar elementos del menú -->
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5">
+    <h2>Información del Vehículo</h2>
+    <div class="input-group mb-3">
+        <input type="text" id="carModel" class="form-control" placeholder="Introduce el modelo del coche">
+        <div class="input-group-append">
+            <button class="btn btn-outline-secondary" type="button" id="searchButton">Buscar</button>
+        </div>
+    </div>
+    <div id="carInfo" class="row">
+    </div>
+</div>
+
+</body>
+</html>

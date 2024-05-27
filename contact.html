@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Taller Mecánico</title>
-<link rel="stylesheet" href="css/styles.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/script.js"></script>
+    <meta charset="UTF-8">
+    <title>Taller Mecánico</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a href="index.html" class="navbar-brand" href="#">
-    <img href="index.html" src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo del Taller Mecánico">
-    Taller Mecánico McQueen
-  </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-    <ul class="navbar-nav">
-   
-    </ul>
-  </div>
+    <a href="index.html" class="navbar-brand">
+        <img src="images/logo.png" width="30" height="30" class="d-inline-block align-top" alt="Logo del Taller Mecánico">
+        Taller Mecánico McQueen
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav">
+            <!-- Menú de navegación -->
+        </ul>
+    </div>
 </nav>
 
 <div class="container mt-5">
@@ -54,6 +54,35 @@
     </div>
 </div>
 
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const comments = document.getElementById('comments').value;
+    let valid = true;
+
+    if (name.trim() === '') {
+      valid = false;
+      alert('El nombre es obligatorio.');
+    }
+
+    const phonePattern = /^[0-9]{10}$/;
+    if (!phonePattern.test(phone)) {
+      valid = false;
+      alert('El número de teléfono debe tener 10 dígitos.');
+    }
+
+    if (comments.trim() === '') {
+      valid = false;
+      alert('Los comentarios son obligatorios.');
+    }
+
+    if (valid) {
+      alert('Formulario enviado correctamente.');
+    }
+  });
+</script>
+
 </body>
 </html>

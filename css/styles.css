@@ -57,3 +57,11 @@ body {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
+
+.car-card {
+    margin-bottom: 20px;
+}
+.car-card img {
+    width: 100%;
+    height: auto;
+}

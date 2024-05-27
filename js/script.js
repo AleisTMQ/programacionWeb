@@ -151,6 +151,9 @@ $(document).ready(function() {
                 <li class="nav-item">
                 <a class="nav-link" href="lista.html">Lista atenciones</a>
                 </li>
+                <li class="nav-item">
+                <a class="nav-link" href="listaAutos.html">Lista de vehiculos</a>
+                </li>
                 <li class="nav-item"><a class="nav-link" href="#">${usuarioLogueado}</a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Atenciones: ${atencionesUser}</a></li>
                 <li class="nav-item"><a class="nav-link" href="#" id="logoutButton">Cerrar Sesión</a></li>
