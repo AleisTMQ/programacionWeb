@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}Mis Boletas{% endblock %}
+
+{% block content %}
+<h1 class="mt-4">Mis Boletas</h1>
+<div class="row">
+    {% for boleta in boletas %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Paquete: {{ boleta.paquete.nombre }}</h5>
+                <p class="card-text">Fecha: {{ boleta.fecha }}</p>
+                <p class="card-text">Total: ${{ boleta.total }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

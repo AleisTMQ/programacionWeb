@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}Listado de Paquetes{% endblock %}
+
+{% block content %}
+<h1 class="mt-4">Listado de Paquetes</h1>
+<a class="btn btn-primary mb-3" href="{% url 'crear_paquete' %}">Crear nuevo paquete</a>
+<div class="row">
+    {% for paquete in paquetes %}
+    <div class="col-md-4 mb-3">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{ paquete.nombre }}</h5>
+                <p class="card-text">{{ paquete.descripcion }}</p>
+                <p class="card-text">Precio: ${{ paquete.precio }}</p>
+                <a href="{% url 'generar_boleta' paquete.id %}" class="btn btn-success">Comprar</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
